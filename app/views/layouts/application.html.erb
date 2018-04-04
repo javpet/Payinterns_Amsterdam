@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PayinternsAmsterdam</title>
+    <title><%= content_for :page_title %>Great companies that pay fair amount of money to their interns</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,11 +9,26 @@
   </head>
 
   <body>
+    <!-- Intro what's this -->
     <div id="intro">
       <h1>
         This is a list of companies & studios in Amsterdam that pay their design/creative interns more than the <a target="blank" href="https://www.government.nl/topics/minimum-wage/amount-of-the-hourly-minimum-wage">Amsterdam living wage</a> (currently €9.11/hr without benefits.)
       </h1>
     </div>
-    <%= yield %>
+
+    <!-- List of companies goes here -->
+    <main>
+        <%= yield %>
+    </main>
+
+
+    <% if !current_page?(controller: 'companies', action: 'new') %>
+      <!-- Do you know some other companies deserving a sport? -->
+      <div id="outro">
+        <h1>
+          Know a place that belongs on this list? Submit it <%= link_to "here", new_company_path %>
+        </h1>
+      </div>
+    <% end %>
   </body>
 </html>
