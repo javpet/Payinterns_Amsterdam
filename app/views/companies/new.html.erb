@@ -1,3 +1,24 @@
 <% content_for :page_title, "Add a company in Amsterdam - " %>
 
-<h1>New form goes here</h1>
+<%= link_to "Back to the list of companies", root_path %>
+
+<section class="form">
+  <h1>Add new company</h1>
+
+  <% if flash[:error].present? %>
+      <div class="success">
+        <%= flash[:error] %>
+      </div>
+  <% end %>
+
+  <%= simple_form_for @company do |f| %>
+    <%= f.input :company_name, placeholder: 'coolcompany@domain.com' %>
+    <%= f.input :company_url, placeholder: 'coolcompany.com' %>
+    <%= f.input :intern_payment, label: "The gross amount paid to intern / month in €", input_html: { min: 1578 }, placeholder: "1578", hint: "€1578 is the minimum livable wage we can accept" %>
+    <%= f.input :sender_name, placeholder: 'cool name' %>
+    <%= f.input :sender_email, placeholder: 'coolperson@domain.com', hint: "We might contact you for additional details, no spam!" %>
+    <%= f.button :submit, "Add company" %>
+  <% end %>
+
+
+</section>

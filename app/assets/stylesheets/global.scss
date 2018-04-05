@@ -30,6 +30,12 @@ h1 {
 	max-width: 800px;
 }
 
+.success {
+	max-width: 800px;
+	font-size: 1rem;
+	color: green;
+}
+
 /*Search bar*/
 
 .SearchBar {
@@ -96,6 +102,35 @@ a:hover {
 	transition: transform 0.3s ease, color 0.2s ease;
 	z-index: 3;
 }
+
+// Form element
+
+.form {
+	margin-top: 30px;
+	max-width: 600px;
+
+	label {
+		margin-bottom: 5px;
+	}
+
+	.input {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+	}
+
+	.hint {
+		font-size: 0.5em;
+		font-style: italic;
+	}
+
+	.error {
+		font-size: 1rem;
+		color: red;
+	}
+}
+
+// Pop-up
 
 #questions {
 	background-color: var(--background-color);

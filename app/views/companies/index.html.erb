@@ -1,3 +1,21 @@
 <% content_for :page_title, "Amsterdam paid creative internships - " %>
 
-<h1>Hello!</h1>
+<!-- Intro what's this -->
+<div id="intro">
+  <h1>
+    This is a list of companies & studios in Amsterdam that pay their design/creative interns more than the <a target="blank" href="https://www.government.nl/topics/minimum-wage/amount-of-the-minimum-wage">Amsterdam living wage</a> (currently €1578.00/month without benefits.)
+  </h1>
+
+  <% if flash[:success].present? %>
+      <div class="success">
+        <%= flash[:success] %>
+      </div>
+  <% end %>
+
+
+<div id="outro">
+  <h1>
+    Know a place that belongs on this list? Submit it <%= link_to "here", new_company_path %>
+  </h1>
+</div>
+</div>
