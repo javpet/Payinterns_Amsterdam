@@ -1,8 +1,11 @@
 :root {
-	--main-color: #000000;
-	--highlight-color: #d6517a;
-	--background-color: #d7d5d8;
+	--main-color: #ff001a;
+	--highlighter-color: #d6517a;
+	--background-color: #000;
 }
+
+//  Amsterdam theme
+$error-color: rgba(255, 255, 255, 0.4);
 
 @import url("https://rsms.me/inter/inter-ui.css");
 
@@ -52,13 +55,17 @@ input {
 	border-bottom: 2px solid var(--main-color);
 }
 
+input[type="submit"] {
+	cursor: pointer;
+}
+
 textarea:focus,
 input:focus {
 	outline: none;
 }
 
 ::placeholder {
-	color: #bbbbbb;
+	color: rgba(#bbbbbb, 0.2);
 }
 
 /*list items*/
@@ -126,7 +133,7 @@ a:hover {
 
 	.error {
 		font-size: 1rem;
-		color: red;
+		color: $error-color;
 	}
 }
 
