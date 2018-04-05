@@ -7,6 +7,8 @@ end
 
 # GEMS added
 gem 'simple_form'
+gem 'devise'
+gem 'activeadmin'
 
 group :development do
   # Use sqlite3 as the database for Active Record
@@ -16,6 +18,8 @@ end
 group :production do
   gem 'pg'
 end
+
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

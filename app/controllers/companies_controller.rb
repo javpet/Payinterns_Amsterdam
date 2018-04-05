@@ -22,6 +22,22 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+
+    flash[:success] = "Company has been updated!"
+
+    if @company.update(form_params)
+    redirect_to root_path
+    else
+      render "edit"
+    end
+  end
+
   def form_params
     params.require(:company).permit(:company_name, :company_url, :intern_payment, :sender_name, :sender_email)
   end
