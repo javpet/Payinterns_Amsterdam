@@ -12,6 +12,12 @@
       </div>
   <% end %>
 
+  <section class="CompanyList">
+    <% @companies.each do |company| %>
+      <%= link_to company.company_name, "http://#{company.company_url}", :target => "_blank", class: "listItem" %>
+    <% end %>
+  </section>
+
 
 <div id="outro">
   <h1>
