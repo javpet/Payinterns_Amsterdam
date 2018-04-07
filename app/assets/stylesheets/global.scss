@@ -2,12 +2,24 @@
 	--main-color: #ff001a;
 	--highlighter-color: #d6517a;
 	--background-color: #000;
+	--error-color: rgba(255, 255, 255, 0.4);
 }
 
-//  Amsterdam theme
-$error-color: rgba(255, 255, 255, 0.4);
-
 @import url("https://rsms.me/inter/inter-ui.css");
+
+// Scrollbar
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-corner {
+	background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: red;
+}
 
 html {
 	font-size: 100%;
@@ -23,6 +35,10 @@ body {
 	letter-spacing: -1;
 	padding: 20px;
 	line-height: 1.5;
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--main-color);
+	}
 }
 
 h1 {
@@ -36,7 +52,8 @@ h1 {
 .success {
 	max-width: 800px;
 	font-size: 1rem;
-	color: green;
+	color: var(--main-color);
+	margin-bottom: 1rem;
 }
 
 /*Search bar*/
@@ -133,7 +150,7 @@ a:hover {
 
 	.error {
 		font-size: 1rem;
-		color: $error-color;
+		color: var(--error-color);
 	}
 }
 
@@ -180,24 +197,24 @@ a:hover {
 	bottom: 0;
 	margin: auto;
 	background-color: var(--background-color);
-	opacity: 0.8;
+	opacity: 0.9;
 	z-index: 2;
 }
-// .popup_inner {
-// 	display: none;
-// 	padding: 20px 30vw 20px 20px;
-// 	max-width: 700px;
-// 	position: fixed;
-// 	border: 2px solid var(--main-color);
-// 	z-index: 3;
-// 	left: 60px;
-// 	right: 60px;
-// 	top: 60px;
-// 	bottom: 60px;
-// 	margin: auto;
-// 	background: var(--background-color);
-// 	overflow: scroll;
-// }
+
+.popup_inner {
+	padding: 20px 30vw 20px 20px;
+	max-width: 700px;
+	position: fixed;
+	border: 2px solid var(--main-color);
+	z-index: 3;
+	left: 60px;
+	right: 60px;
+	top: 60px;
+	bottom: 60px;
+	margin: auto;
+	background: var(--background-color);
+	overflow: scroll;
+}
 
 .on-screen {
 	display: block;
