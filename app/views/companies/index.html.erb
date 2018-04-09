@@ -6,9 +6,11 @@
     This is a list of companies & studios in Amsterdam that pay their design/creative interns more than the <a target="blank" href="https://www.government.nl/topics/minimum-wage/amount-of-the-minimum-wage">Amsterdam living wage</a> (currently €1578.00/month without benefits.)
   </h1>
 
-  <form>
-    <input type="text" name="q" value="<%= params[:q] %>" placeholder="search"/>
-  </form>
+  <% if @companies.count > 9 %>
+    <form>
+      <input type="text" name="q" value="<%= params[:q] %>" placeholder="search"/>
+    </form>
+  <% end %>
 
   <% if flash[:success].present? %>
       <div class="success">
