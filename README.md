@@ -6,3 +6,4 @@ This site is for the great companies 🙌 out there, which pay more than the liv
 
 * Simple_form
 * PostgreSQL - Heroku
+* ActiveAdmin
