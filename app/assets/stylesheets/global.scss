@@ -2,7 +2,7 @@
 	--main-color: #fff;
 	--highlighter-color: #d6517a;
 	--background-color: #fc5b00;
-	--error-color: rgba(255, 255, 255, 0.4);
+	--error-color: yellow;
 }
 
 @import url("https://rsms.me/inter/inter-ui.css");
@@ -18,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: red;
+	background-color: var(--main-color);
 }
 
 html {
@@ -82,7 +82,7 @@ input:focus {
 }
 
 ::placeholder {
-	color: rgba(#bbbbbb, 0.2);
+	color: rgba(#fff, 0.3);
 }
 
 /*list items*/
@@ -201,7 +201,7 @@ a:hover {
 	bottom: 0;
 	margin: auto;
 	background-color: var(--background-color);
-	opacity: 0.9;
+	opacity: 0.95;
 	z-index: 2;
 }
 
@@ -241,13 +241,13 @@ label {
 }
 
 p {
-	padding: 5px 0 50px 0;
+	padding: 5px 0 25px 0;
 	margin: 0;
 	line-height: 1.5;
 }
 
 #outro {
-	padding-top: 100px;
+	padding-top: 50px;
 }
 
 .fb_iframe_widget {
