@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
       @companies = Company.where("lower(company_name) LIKE ?", "%" + params[:q].downcase + "%")
     else
       # Showing all companies
-      @companies = Company.all
+      @companies = Company.where(is_featured: true)
     end
   end
 
