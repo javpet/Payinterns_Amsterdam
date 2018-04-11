@@ -276,5 +276,8 @@ p {
 
 	#questions:hover {
 		transform: rotate(0deg);
+		background-color: var(--main-color);
+		color: var(--background-color);
+		transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 	}
 }
